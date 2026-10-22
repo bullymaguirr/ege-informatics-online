@@ -62,13 +62,20 @@ for x in range(2):
                 F = ((z <=x) <= (x == y )) or (not w)
                 if F == 0:
                     print(x,y,w,z)
-
+print('-----------------------------------')
 # Домашка
 # Сайт: https://kompege.ru/task
 # № 28750, 25341, 27614
 
 
-
+print('x y w z')
+for x in range(2):
+    for y in range(2):
+        for w in range(2):
+            for z in range(2):
+                F = ((x == z) <= ((not y) or w)) == (not((w<=z) or (x<=y)))
+                if F == 1:
+                    print(x,y,w,z)
 
 
 

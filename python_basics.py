@@ -294,10 +294,10 @@ x = x + 1 — КЛЮЧЕВАЯ СТРОЧКА!
 причем в разных частях программы.
 """
 # Функция которая будет приветствовать пользователя
-def greetings():
-    # Тело функции
-    print('Приветствую тебя путник')
-    print('Добро пожаловать на урок по Питону!')
+# def greetings():
+#     # Тело функции
+#     print('Приветствую тебя путник')
+#     print('Добро пожаловать на урок по Питону!')
 # greetings()
 #def proiz3(num1,num2,num3):
     #print(num1*num2*num3)
@@ -307,31 +307,53 @@ def greetings():
 """
 Оператор return (Выходные данные)
 """
-def proiz3(num1,num2,num3):
-    return num1*num2*num3
-print(proiz3(12030123,1231231,1412412))
-a = proiz3(12030123,1231231,1412412)
-print("Результат работы функции: ",a)
+# def proiz3(num1,num2,num3):
+#     return num1*num2*num3
+# print(proiz3(12030123,1231231,1412412))
+# a = proiz3(12030123,1231231,1412412)
+# print("Результат работы функции: ",a)
 # Было - 20920449330908178156
 # Стало - пока в ретурне. Нужно вытащить.
 
-def add_print(a,b):
-    print(a + b)
-def add_return(a,b):
-    return a + b
-add_print(1,10)
-c = add_return(1,10)
-print(c)
+# def add_print(a,b):
+#     print(a + b)
+# def add_return(a,b):
+#     return a + b
+# add_print(1,10)
+# c = add_return(1,10)
+# print(c)
 
 """
 Напишите функцию access_password(password), которая проверяет секретный пароль.
 Если пароль "python" - то всё супер и ретурн должен вернуть "Доступ разрешен!", 
 если нет, то "Неверный вход"!
 """
-def access_password(password):
-    if password == "python":
-        return "Доступ разрешен!"
-    else:
-        return "Не разрешен!"
-print(access_password('python'))
+# def access_password(password):
+#     if password == "python":
+#         return "Доступ разрешен!"
+#     else:
+#         return "Не разрешен!"
+# print(access_password('python'))
 
+
+# Строки
+text1 = 'текст'
+# Конкактенация
+text2 = '10' + text1 + '20'
+#print(text2 * 200) # Дублирование
+# Индекс
+word = 'PythonP'
+#       0 1 2 3 4 5
+#       -6-5-4-3-2-1
+print(word[0], 'первый символ')
+print(word[-1], 'последний символ')
+# Срез
+# строка[start:end:step]
+print(word[1:3]) # Срез от 0 индекса до 3.
+print(word[:3]) # Срез от начала до 3.
+print(word[3:]) # Срез от 3 символа и до конца строки
+print(word[::2]) # Срез всей строки, но каждый второй символ
+print(word[::-1]) # Перевернуть всю строку
+
+# Метод
+print(word.count('P'))
