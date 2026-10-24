@@ -357,3 +357,12 @@ print(word[::-1]) # Перевернуть всю строку
 
 # Метод
 print(word.count('P'))
+
+
+# a = "122103333333333300102221010013333322022210144"
+# print(a.count('1') + a.count('2')* 2 + a.count('3') * 3 + a.count('4') * 4)
+# print(sum(map(int,a)))
+
+number = '1234'
+# sum(map(int,number)) # Сумма цифр
+print(sum(map(int,number)))
