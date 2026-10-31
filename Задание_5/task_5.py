@@ -61,12 +61,12 @@
 
 # Алгоритм перевода десятичного числа в любую СС.
 
-def N_to_three(N):
-    s = '' # Сюда дописываем остатки
-    while N > 0: # До каких пор мы его делим.
-        s = str(N % 3) + s
-        N = N // 3
-    return s
+# def N_to_three(N):
+#     s = '' # Сюда дописываем остатки
+#     while N > 0: # До каких пор мы его делим.
+#         s = str(N % 3) + s
+#         N = N // 3
+#     return s
 
 # for N in range(1,300):
 #     n_3 = N_to_three(N)
@@ -81,14 +81,29 @@ def N_to_three(N):
 #     if R >= 177:
 #         print(N,R)
 
-for N in range(1,300):
-    n_3 = N_to_three(N)
-    if N % 3 == 0: # Делится на 3, либо кратно 3
-        n_3 = '1' + n_3 + '02'
-    else:
-        n_3 = n_3 + N_to_three(sum(map(int,n_3)) * 2)
-    R = int(n_3,3)
-    if R >= 177:
-        print(N,R)
-
-N_to_three()
+# for N in range(1,300):
+#     n_3 = N_to_three(N)
+#     if N % 3 == 0: # Делится на 3, либо кратно 3
+#         n_3 = '1' + n_3 + '02'
+#     else:
+#         n_3 = n_3 + N_to_three(sum(map(int,n_3)) * 2)
+#     R = int(n_3,3)
+#     if R >= 177:
+#         print(N,R)
+#
+# N_to_three()
+# lst_min = [] # Тут будут меньше чем 1220
+# lst_max = [] # Тут будут БОЛЬШЕ чем 1220
+# for N in range(1,300):
+#     n_3 = N_to_three(N)
+#     if N % 3 != 0: # Делится на 3, либо кратно 3
+#         n_3 = '1' + n_3 + n_3[-3:]
+#     else:
+#         n_3 = n_3 + N_to_three(sum(map(int,n_3)) * 8)
+#     R = int(n_3,3) 10 + 26 = 36
+#     if R < 1220:
+#         lst_min.append(R)
+#     elif R > 1220:
+#         lst_max.append(R)
+# print(max(lst_min)) # Меньше чем 1220. Максимальное в этом списке будет самым близким к 1220
+# print(min(lst_max)) # Больше чем 1220. Минимальное в этом списке будет самым близким к 1220
