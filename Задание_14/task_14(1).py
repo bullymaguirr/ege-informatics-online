@@ -46,5 +46,12 @@
 #     print(x)
 # print(count)
 
+# number = 5 * 1296**2021 - 4*216**2022 + 3*36**2023 - 2*6**2024 - 2025
+# count = 0
+# while number > 0:
+#     if (number % 36) % 2 == 0: # Если нашлось ЧЕТНОЕ число
+#         count = count + 1 # Увеличиваем на 1
+#     number = number // 36 # Теперь делим это число
+# print(count)
 
 
