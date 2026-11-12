@@ -18,12 +18,13 @@
 #     return count
 # print(N36(x))
 #
-# count = 0
-# while x > 0:
-#     if (x % 36) % 2 == 0:
-#         count = count + 1
-#     x = x//36
-# print(count)
+count = 0
+while x > 0:
+    if (x % 36) % 2 == 0:
+        count = count + 1
+        print(count)
+    x = x//36
+print(count)
 
 # x = 30 * 36 ** 231 + 18 * 6 ** 101 - 3 * 36 ** 45 - 2357
 # count = 0
