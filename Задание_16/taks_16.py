@@ -88,27 +88,28 @@
 # print(f(37811))
 
 
-# from functools import lru_cache
-# @lru_cache(100)
-# def f(n):
-#     if n >= 21:
-#         return f(n-8) + 1095 # Рекурсивный случай
-#     if n < 21:
-#         return 10 * (g(n-7) - 36) # Базовый случай
-# @lru_cache(100)
-# def g(n):
-#     if n >= 22560:
-#         return n // 23 + 33 # Базовый случай
-#     if n < 22560:
-#         return g(n+11) - 4 # Рекурсивный случай
-# for n in range(22560,1,-1): g(n)
-# for n in range(21, 550):  f(n)
-# print(f(548))
-# f(550) = f(n-8) + 1095
-# f(542) = f(542-8) + 1095
-# ...
-# ...
-# ...
-# f(20) = 10 * (g(13) - 36))
+from functools import lru_cache
+
+@lru_cache(100)
+def f(n):
+    if n >= 21:
+        return f(n-8) + 1095 # Рекурсивный случай
+    if n < 21:
+        return 10 * (g(n-7) - 36) # Базовый случай
+
+@lru_cache(100)
+def g(n):
+    if n >= 22560:
+        return n // 23 + 33 # Базовый случай
+    if n < 22560:
+        return g(n+11) - 4 # Рекурсивный случай
+for n in range(22560,1):
+    g(n)
+for n in range(21,550):
+    f(n)
+print(f(548))
+
+
+
 
 
